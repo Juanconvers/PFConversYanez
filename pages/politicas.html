@@ -22,17 +22,37 @@
 
 <body class="container-fluid">
 
-    <!-- NAVEGADOR -->
-    <header class="row">
-        <div class="nav navigation">
-            <a href="../index.html"><img class="navigation__link--logo" src="../assets/img/LogoFrankyCharly.png"
-                    alt="logo-frankycharlie"></a>
-            <a class="navigation__link" href="./ninas.html">NIÑAS</a>
-            <a class="navigation__link" href="./ninos.html">NIÑOS</a>
-            <a class="navigation__link" href="./tienda.html">NUESTRA TIENDA</a>
-            <a class="navigation__link" href="./politicas.html">SOBRE TU COMPRA</a>
-        </div>
-    </header>
+    <!-- NAVEGADOR MENÚ HAMBURGUESA CON TEMPLATE DE BOOTSTRAP-->	
+	<header class="row"> 
+		<nav class="nav navbar navbar-expand-md navbar-light">		
+			<a href="../index.html"><img class="navigation__link--logo" src="../assets/img/LogoFrankyCharly.png"
+				alt="logo-frankycharlie"></a>					
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			  <ul class="navbar-nav">
+				<li class="nav-item active">
+				  <a class="nav-link navigation__link" href="./ninas.html">NIÑAS</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link navigation__link" href="./ninos.html">NIÑOS</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link navigation__link" href="./tienda.html">NUESTRA TIENDA</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link navigation__link" href="./politicas.html">SOBRE TU COMPRA</a>
+				</li>
+			  </ul>
+			</div>
+            <div class="nav-cart">
+                <a href="index.html"><img class="navigation__cart--button" src="../assets/img/2-Icon-commerce-cart-market2.svg"
+                    alt="cart-marketplace"></a>
+            </div>
+		</nav>
+	</header>	
     <main>
         <!-- TÍTULO DE LA PÁGINA -->
         <div class="row">
@@ -109,8 +129,8 @@
                         <img class="navigation__link--logo" src="../assets/img/3-Icon-commerce-money-shield.svg" width="100"
                             alt="logo-frankycharlie">
                         <p class="textbox__paragraph">Cuando pagas con tarjeta de crédito, o utilizando el botón PSE, 
-                            la plataforma puede tardar hasta 1 día hábil en aprobar la transacción. <br> <br>
-                            La entidad bancaria aprobará o rechazará el pago dependiendo a la disponibilidad de recursos en tus medios de pago, 
+                            la plataforma puede tardar hasta un (1) día hábil en aprobar la transacción. <br> <br>
+                            La entidad bancaria aprobará o rechazará el pago dependiendo de la disponibilidad de recursos en tus medios de pago, 
                             o actividad o inactividad de los mismos. <br> <br> Al generarse la aprobación del pago por parte de la entidad bancaria, recibirás un correo electrónico de confirmación de la compra (el cual te explicamos anteriormente).
                         </p>
                     </div>
@@ -118,8 +138,8 @@
                         <h3 class="h3">TRATAMIENTO<br>DE DATOS</h3>
                         <img class="navigation__link--logo" src="../assets/img/5-Icon-commerce-chat.svg" width="100"
                             alt="logo-frankycharlie">
-                        <p class="textbox__paragraph">Los datos personales de clientes, proveedores, contratistas, empleados, ex empleados, que en adelante se recojan o que se encuentren en nuestras bases de datos serán tratados con las siguientes finalidades: <br> <br>
-                            Clientes: FRANKY-CHARLIE, usará la información que suministre para: Efectuar las gestiones pertinentes para el desarrollo de la etapa precontractual, contractual y pos contractual con FRANKY-CHARLIE, en especial trámites administrativos de creación, 
+                        <p class="textbox__paragraph">Los datos personales de clientes, proveedores, contratistas, empleados, ex empleados, que en adelante se recojan o que se encuentren en nuestras bases de datos serán tratados conforme a la ley colombiana aplicable y sólo con fines comerciales a los que el sujeto preste su consentimiento.<br> <br>
+                            Señor comerciante, FRANKY-CHARLIE sólo usará la información que suministres para efectuar las gestiones pertinentes de la etapa precontractual, contractual y pos contractual con nosotros, en especial trámites administrativos de creación, 
                             inscripción financiera y giro. 
                         </p>
                     </div>
@@ -139,7 +159,7 @@
                         está obligación de enviarme alguna prueba de la transacción efectuada? <br>
                     <h4 class="h4">Rta/ Claro que sí. Recibirás el comprobante en tu correo electrónico.</h4></li>
                     <li class="list-group-item lead">Una vez que hago el pedido de mi producto a través de internet,<br>
-                        ¿en cuánto tiempo deberá enviármelo? <br>
+                        ¿en cuánto tiempo deberán enviármelo? <br>
                     <h4 class="h4">Rta/ El producto será enviado de inmediato.</h4></li>
                     <li class="list-group-item lead">Cuáles métodos de pago recibe FRANKY-CHARLIE? <br>
                     <h4 class="h4">Rta/ Recibimos trasferencia electrónica, consignación bancaria y tarjeta de crédito.</h4></li>
@@ -148,31 +168,42 @@
     </main>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="row">
-        <div id="footer">
-            <div class="footer__info">
-                <p class="footer__headline">CONTACTO</p>
-                <p class="footer__paragraph">Centro Comercial Bulevar - Local 277 <br>
-                    Calle 127 No. 56-12, Bogotá D.C. <br>
-                    hola@frankycharlie.com <br>
-                    +57 315 366 2087 <br>
-                </p>
-            </div>
-            <div class="footer__info">
-                <p class="footer__headline">SOBRE TU COMPRA</p>
-                <a class="footer__link" href="./politicas.html">Términos y Condiciones</a></li><br>
-                <a class="footer__link" href="./politicas.html">Políticas de privacidad</a></li><br>
-                <a class="footer__link" href="./politicas.html">Política Comercial y de Cambios</a></li><br>
-            </div>
-            <div class="footer__info">
-                <p class="footer__headline">REDES SOCIALES</p>
-                <a class="footer__link" href="https://es-la.facebook.com/" target="_blank">FACEBOOK</a></li><br>
-                <a class="footer__link" href="https://www.instagram.com/" target="_blank">INSTAGRAM</a></li><br>
-                <a class="footer__link" href="https://twitter.com" target="_blank">TWITTER</a></li><br>
-                <p class="footer__paragraph">Franky Charlie S.A.S. marca registrada <br>
-                    Todos los derechos reservados</p>
-            </div>
-    </footer>
+	<footer class="row">
+		<div id="footer">
+			<div class="footer__info">
+				<p class="footer__headline">CONTACTO</p>
+				<p class="footer__paragraph">Centro Comercial Bulevar - Local 277 <br>
+					Calle 127 No. 56-12, Bogotá D.C. <br>
+					hola@frankycharlie.com <br>
+					+57 315 366 2087 <br>
+				</p>
+			</div>
+			<div class="footer__info">
+				<p class="footer__headline">SOBRE TU COMPRA</p>
+				<a class="footer__link" href="./politicas.html">Términos y Condiciones</a></li><br>
+				<a class="footer__link" href="./politicas.html">Políticas de Privacidad</a></li><br>
+				<a class="footer__link" href="./politicas.html">Política Comercial y de Cambios</a></li><br>
+			</div>
+			<div class="footer__info">
+				<p class="footer__headline">REDES SOCIALES</p>
+                <section class="footer__info--socialmedia">
+                    <div class="footer__link--socialmedia">
+                        <a href="https://es-la.facebook.com/" target="_blank">
+                        <img src="../assets/img/ICON-facebook-PNG-01.png" class="footer__link--icon" alt="facebook-icon"></a></li><br>
+                    </div>
+                    <div class="footer__link--socialmedia">
+                        <a href="https://www.instagram.com/" target="_blank">
+                        <img src="../assets/img/ICON-instagram-PNG-01.png" class="footer__link--icon" alt="instagram-icon"></a></li><br>
+                    </div>
+                    <div class="footer__link--socialmedia">
+                        <a href="https://web.whatsapp.com/" target="_blank">
+                        <img src="../assets/img/ICON-whatsap-PNG-01.png" class="footer__link--icon" alt="whatsapp-icon"></a></li><br>
+                    </div> 
+                </section>
+				<p class="footer__paragraph">Franky Charlie S.A.S. marca registrada <br>
+					Todos los derechos reservados</p>
+			</div>
+	</footer>
 
 </body>
 <script>

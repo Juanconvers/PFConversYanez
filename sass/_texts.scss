@@ -1,3 +1,6 @@
+/* IMPORTE DE PARTIALS */
+
+@import "_mixins.scss";
 
 /* FUENTES */
 
@@ -6,7 +9,6 @@
     src: url(../font/Montserrat-Bold.ttf);
     font-weight: 700;
 }
-
 @font-face {
     font-family: 'montserrat';
     src: url(../font/Montserrat-Regular.ttf);
@@ -26,7 +28,6 @@ $estilo-marcos: (
     font-weight: 700;
     padding: 15px;
     text-align: center;
-
     .h1 {
         margin: 0%;
         font-weight: 700;
@@ -39,18 +40,12 @@ $estilo-marcos: (
     margin: map-get($estilo-marcos, marco-A);
     height: auto;
     padding: 15px 50px;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    
+    @include flexible (flex, column nowrap, unset, unset, center, center);
     .textbox__title_h2 {
         .h2 {
             font-weight: 700;
         }
     }
-
     .textbox__paragraph {
         padding: map-get($estilo-marcos, marco-A);
         margin: 10px 70px;
@@ -58,20 +53,14 @@ $estilo-marcos: (
         font-size: 20px;
         color: #000000;
     }
-
     .textbox__location {
         padding: map-get($estilo-marcos, marco-A);
         margin: map-get($estilo-marcos, marco-A);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-content: center;
-
+        @include flexible (flex, row nowrap, space-around, center, unset, unset);
         .textbox__location--map {
             padding: map-get($estilo-marcos, marco-A);
             margin: map-get($estilo-marcos, marco-A);
         }
-
         .textbox__paragraph {
             @extent .textbox__location--map;
             text-align: start;
@@ -81,9 +70,7 @@ $estilo-marcos: (
 
     .textbox__policy {
         margin: map-get($estilo-marcos, marco-A);
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        @include flexible (flex, row wrap, center, unset, unset, unset);
         
         .textbox__policy--box {
             width: 350px;

@@ -1,32 +1,19 @@
+/* IMPORTE DE PARTIALS */
 
-/* MIXINS */
+@import "_mixins.scss";
 
-@mixin flex-fila {
-    display: flex;
-    flex-direction: row;
-  }
-
-@mixin flex-columna {
-    display: flex;
-    flex-direction: column;
-  }
-
-
-/* NAVEGADOR TRES BOTONES / MENÚ DE BOTONES */
+/* NAVEGADOR DOS BOTONES / MENÚ DE BOTONES */
 .menu {
     padding: 15px;
-    @include flex-fila;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-content: center;
-
+    @include flexible (flex, row wrap, center, center, unset, unset);
+  
     .menu__button {
-        width: 250px;
+        width: 300px;
         padding: 10px 30px;
     }
 
     .menu__button:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
 
@@ -39,34 +26,28 @@
     gap: 60px;
 
     .shopping__item {
-        @include flex-columna;
-        align-items: center;
-
+        @include flexible (flex, column nowrap, unset, unset, center, unset);
         .shopping__image {
             height: 600px;
         }
-
         .shopping__image--camisa {
             height: 450px;
         }
-
         .h3 {
             padding: 7px;
             font-weight: 700;
             font-size: 20px;
             color: #000000;
         }
-
         .shopping__link {
             text-decoration-line: none;
             font-weight: 400;
             font-size: 20px;
             color: #000000;
         }
-
         .shopping__link:hover {
-            color: white;
-            background: rgb(255, 190, 93);
+            color: rgb(187, 152, 99);
+            
         }
     }
 }
@@ -74,11 +55,7 @@
 /* FILTRO DE SELECCIÓN DE ROPA */
 
 .filter {
-    @include flex-fila;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-content: center;
-
+    @include flexible (flex, row wrap, center, center, unset, unset);
     .filter__selecter {
         padding: 30px 30px;
     }
@@ -87,7 +64,7 @@
 /* FORMULARIO DE CONTACTO */
 
 .form {
-    @include flex-columna;
+    @include flexible (flex, column wrap, center, unset, center, unset);
     justify-content: center;
     align-items: center;
 

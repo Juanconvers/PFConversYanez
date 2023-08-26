@@ -1,25 +1,23 @@
+/* IMPORTE DE PARTIALS */
+
+@import "_mixins.scss";
 
 /* VISTA PARA MOVIL */
 @media (max-width: 480px) {
     .container-fluid {
 
         header {
-            .row{
-                display: flex;
-                flex-direction: column;
-            }
+            
             .nav {
                 padding: 10px;
-                display: flex;
-                flex-direction: column;
-                justify-items: center;
-                align-items: center;
-                text-align: center;
-
-                .navigation__link {
-                    margin: 4px;
-                    font-size: 16px;
-                }
+                @include flexible (flex, row wrap, space-evenly, unset, center, center);
+ 
+                .nav-item{
+                    .navigation__link {
+                        margin: 4px;
+                        font-size: 16px;        
+                    }
+                }          
             }
         }
 
@@ -30,11 +28,7 @@
         }
 
         .banner {
-
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-content: center;
-
+            @include flexible (flex, row wrap, column, center, unset, unset);
             .banner__image {
                 width: 380px;
             }
@@ -55,9 +49,7 @@
 
             .textbox__location {
                 padding: 10px;
-                flex-direction: column;
-                flex-wrap: wrap;
-
+                @include flexible (flex, column wrap, unset, unset, unset, unset);
                 .textbox__location--map {
                     width: 320px;
                 }
@@ -76,46 +68,41 @@
                 }
             }
         }
-    }
-
-    #filter {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: flex-start;
-
-        .filter__selecter {
-            padding: 7px 40px;
-        }
-    }
-
-    .menu__button {
-        padding: 5px 20px;
-    }
-
-    .form {
-        .form__item {
-            font-size: 16px;
-
-            .form__input {
-                width: 390px;
-            }
-
-            .form__message {
-                width: 390px;
+    
+        #filter {
+            @include flexible (flex, column wrap, center, unset, flex-start, unset);
+            .filter__selecter {
+                padding: 7px 40px;
             }
         }
-    }
 
-    .footer {
-        .footer__info {
-            padding-top: 10px;
+        .menu__button {
+            padding: 5px 20px;
         }
 
-        .footer__link,
-        .footer__paragraph {
-            line-height: 25px;
+        .form {
+            .form__item {
+                font-size: 16px;
+
+                .form__input {
+                    width: 390px;
+                }
+
+                .form__message {
+                    width: 390px;
+                }
+            }
+        }
+
+        .footer {
+            .footer__info {
+                padding-top: 10px;
+            }
+
+            .footer__link,
+            .footer__paragraph {
+                line-height: 25px;
+            }
         }
     }
 }

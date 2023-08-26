@@ -1,0 +1,116 @@
+
+/* MIXINS */
+
+@mixin flex-fila {
+    display: flex;
+    flex-direction: row;
+  }
+
+@mixin flex-columna {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+/* NAVEGADOR TRES BOTONES / MENÚ DE BOTONES */
+.menu {
+    padding: 15px;
+    @include flex-fila;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+
+    .menu__button {
+        width: 250px;
+        padding: 10px 30px;
+    }
+
+    .menu__button:hover {
+        transform: scale(1.2);
+    }
+}
+
+/* SECCIÓN DE COMPRAS */
+
+.shopping {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    justify-content: space-evenly;
+    gap: 60px;
+
+    .shopping__item {
+        @include flex-columna;
+        align-items: center;
+
+        .shopping__image {
+            height: 600px;
+        }
+
+        .shopping__image--camisa {
+            height: 450px;
+        }
+
+        .h3 {
+            padding: 7px;
+            font-weight: 700;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .shopping__link {
+            text-decoration-line: none;
+            font-weight: 400;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .shopping__link:hover {
+            color: white;
+            background: rgb(255, 190, 93);
+        }
+    }
+}
+
+/* FILTRO DE SELECCIÓN DE ROPA */
+
+.filter {
+    @include flex-fila;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+
+    .filter__selecter {
+        padding: 30px 30px;
+    }
+}
+
+/* FORMULARIO DE CONTACTO */
+
+.form {
+    @include flex-columna;
+    justify-content: center;
+    align-items: center;
+
+    .form__item {
+        padding: 5px;
+        font-size: 20px;
+        font-weight: 700;
+
+        .form__input {
+            height: 30px;
+            width: 600px;
+        }
+
+        .form__message {
+            height: 90px;
+            width: 600px;
+        }
+
+        .form__input--button {
+            font-weight: 700;
+            width: 250px;
+            height: 50px;
+        }
+    }
+}
+

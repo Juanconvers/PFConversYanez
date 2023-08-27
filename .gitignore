@@ -1,0 +1,6 @@
+# Ignorar archivo notas del proyecto
+*.txt
+# Ignorar archivo calculos para flexbox
+*.doc
+# Ignorar archivo zip para cargar el sitio en hosting
+*.zip
